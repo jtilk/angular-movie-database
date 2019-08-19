@@ -6,6 +6,8 @@ import { AppComponent } from "./app.component";
 import { SearchCriteriaComponent } from "./search-criteria/search-criteria.component";
 import { MovieListComponent } from "./movie-list/movie-list.component";
 import { WatchlistPageComponent } from "./watchlist-page/watchlist-page.component";
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,8 +16,8 @@ import { WatchlistPageComponent } from "./watchlist-page/watchlist-page.componen
     MovieListComponent,
     WatchlistPageComponent
   ],
-  imports: [BrowserModule, MovieService, RoutingService],
-  providers: [],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
