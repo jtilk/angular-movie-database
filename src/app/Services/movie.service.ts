@@ -5,6 +5,7 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class MovieService {
+  testArray: [] = [];
   constructor(private http: HttpClient) {}
 
   getMovieData(): any {
