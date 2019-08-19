@@ -8,13 +8,15 @@ import { MovieListComponent } from "./movie-master/movie-list/movie-list.compone
 import { WatchlistPageComponent } from "./movie-master/watchlist-page/watchlist-page.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { MovieMasterComponent } from './movie-master/movie-master.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchCriteriaComponent,
     MovieListComponent,
-    WatchlistPageComponent
+    WatchlistPageComponent,
+    MovieMasterComponent
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [MovieService, RoutingService],
