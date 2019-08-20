@@ -1,2 +1,2 @@
 <p>movie-list works</p>
-<app-movie-card></app-movie-card>
+<app-movie-card *ngFor="let movie of movieData" [movie]="movie"></app-movie-card>

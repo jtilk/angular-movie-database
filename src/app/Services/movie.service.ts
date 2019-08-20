@@ -21,4 +21,20 @@ export class MovieService {
       )
       .toPromise();
   }
+
+  getPopMovieData(): any {
+    return this.http
+      .get(
+        `https://api.themoviedb.org/3/movie/popular?api_key=e5ae3d31b67ec5459b5a39058c5630cd&language=en-US&page=1`
+      )
+      .toPromise();
+  }
+
+  getMovieDetails(id: number): any {
+    return this.http
+      .get(
+        `https://api.themoviedb.org/3/movie/${id}?api_key=e5ae3d31b67ec5459b5a39058c5630cd&language=en-US`
+      )
+      .toPromise();
+  }
 }

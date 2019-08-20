@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MovieService} from '../../Services/movie.service';
 
 @Component({
@@ -7,15 +7,16 @@ import {MovieService} from '../../Services/movie.service';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent implements OnInit {
-  movieData: object[];
-
+  @Input() movie: any;
+  movieDetails: any;
   constructor(private movieService: MovieService) { }
 
   ngOnInit() {
-    console.log("Get Movie Data works (Movie-card component)");
-    this.movieService.getMovieData().then(response => {
-      this.movieData = response.data;
+    this.movieService.getMovieDetails(this.movie.id).then(response => {
+      this.movieDetails = response ;
+      console.log(this.movieDetails);
     });
+
   }
 
 }

@@ -6,7 +6,8 @@ import { MovieService } from "../Services/movie.service";
   styleUrls: ["./movie-list.component.css"]
 })
 export class MovieListComponent implements OnInit {
-  movieData: any;
+
+  movieData: object[];
 
   constructor(private movieService: MovieService) {}
 
@@ -18,9 +19,17 @@ export class MovieListComponent implements OnInit {
     });
   }
 
+  getPopMovieData(): any {
+    console.log("Get Pop Movie Data works (Movie-list component)");
+    this.movieService.getPopMovieData().then(response => {
+      this.movieData = response.results ;
+      console.log(this.movieData);
+    });
+  }
+
   ngOnInit() {
     console.log("Get Movie Data works (Movie-list component on init)");
-    this.movieService.getMovieData("guardians").then(response => {
+    this.movieService.getMovieData("").then(response => {
       this.movieData = response.results ;
       console.log(this.movieData);
     });
