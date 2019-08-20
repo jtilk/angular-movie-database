@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MovieMasterComponent } from './movie-master.component';
+import { TopnavComponent } from './topnav.component';
 
-describe('MovieMasterComponent', () => {
-  let component: MovieMasterComponent;
-  let fixture: ComponentFixture<MovieMasterComponent>;
+describe('TopnavComponent', () => {
+  let component: TopnavComponent;
+  let fixture: ComponentFixture<TopnavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieMasterComponent ]
+      declarations: [ TopnavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MovieMasterComponent);
+    fixture = TestBed.createComponent(TopnavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,21 @@
+<p>movie-list works</p>
+
+<app-movie-card *ngFor="let movie of movieData" [movie]="movie"></app-movie-card>
+
+<form
+  #form="ngForm"
+  (submit)="getMovieData(form.value.searchTerm); getMovieGenre()"
+>
+  <input type="text" name="searchTerm" ngModel />
+</form>
+<!-- <div *ngFor="let movie of movieData">
+  <!-- <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" /> -->
+<!--   <p>Title:{{ movie.title }}</p>
+  <p>Genre:{{ movie.genre }}</p>
+  <p>Rating:{{ movie.rating }}</p>
+  <p>Vote Average:{{ movie.vote_average }}</p>
+  <p>Release Date:{{ movie.release_date }}</p>
+  <p>Overview:{{ movie.overview }}</p>
+  <p>ID:{{ movie.id }}</p>
+  <p>Runtime {{ movie.runtime }}</p>
+</div> --> -->
