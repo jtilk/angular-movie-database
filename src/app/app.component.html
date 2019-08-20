@@ -2,13 +2,19 @@
   <section id="sideNav">
     <nav>
       <ul>
-        <li>Home</li>
-        <li>Search</li>
-        <li>WatchList</li>
+        <li (click)="navToHome()">Home</li>
+        <li (click)="navToSearch()">Search</li>
+        <li (click)="navToWatchList()">WatchList</li>
       </ul>
     </nav>
   </section>
-  <main id="viewContainer">1</main>
+  <main id="viewContainer">
+    <!-- <app-home></app-home> -->
+    <app-movie-list></app-movie-list>
+    <!-- <app-search></app-search> -->
+    <!-- <app-watch-list></app-watch-list> -->
+    <router-outlet></router-outlet>
+  </main>
 </div>
 
 <!-- <app-movie-list></app-movie-list> -->

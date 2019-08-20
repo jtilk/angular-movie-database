@@ -6,19 +6,19 @@ import { Router } from "@angular/router";
 export class RoutingService {
   constructor(private router: Router) {}
 
-  navToMaster(): void {
-    this.router.navigate(["movieMaster"]);
+  navToHome(): void {
+    this.router.navigate(["home"]);
   }
   navToWatchList(): void {
-    this.router.navigate(["watchList"]);
+    this.router.navigate(["watch-list"]);
   }
-  navToLanding(): void {
-    this.router.navigate(["landingPage"]);
+  navToSearch(): void {
+    this.router.navigate(["search"]);
   }
   navToMovieList(): void {
-    this.router.navigate(["movieList"]);
+    this.router.navigate(["movie-list"]);
   }
   navToMovieCard(): void {
-    this.router.navigate(["movieCard"]);
+    this.router.navigate(["movie-card"]);
   }
 }
