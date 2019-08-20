@@ -1,12 +1,10 @@
 <p>search-criteria works!</p>
 
-<div class="search-wrapper">
-  <form
-    input
-    type="text"
-    class="input"
-    ngModel="searchString"
-    placeholder="Type to
-    begin searching."
-  ></form>
-</div>
+<form
+  #form="ngForm"
+  (submit)="getMovieData(form.value.searchTerm); getMovieGenre()"
+>
+  <input type="text" name="searchTerm" ngModel />
+</form>
+
+
