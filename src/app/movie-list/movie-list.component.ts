@@ -6,8 +6,10 @@ import { MovieService } from "../Services/movie.service";
   styleUrls: ["./movie-list.component.css"]
 })
 export class MovieListComponent implements OnInit {
-  movieData: any;
+
+  movieData: object[];
   movieGenre: any;
+  
   constructor(private movieService: MovieService) {}
 
   getMovieData(searchQuery: string): any {
@@ -23,6 +25,14 @@ export class MovieListComponent implements OnInit {
       this.movieGenre = response.genres;
       console.log(this.movieGenre);
       // console.log(response.genres);
+    });
+  }
+
+  getPopMovieData(): any {
+    console.log("Get Pop Movie Data works (Movie-list component)");
+    this.movieService.getPopMovieData().then(response => {
+      this.movieData = response.results ;
+      console.log(this.movieData);
     });
   }
 

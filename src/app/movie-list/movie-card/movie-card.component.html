@@ -1,1 +1,8 @@
-<p>movie-card works!</p>
+<div class="movie_card">
+  <div class="poster_div">
+    <img class="poster_img" src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="{{ movie.title }}">
+  </div>
+  <p>{{ movie.title }}</p>
+  <p>User Rating: {{ movie.vote_average }}/10 </p>
+  <p>Runtime: {{ movieDetails?.runtime }} Minutes</p>
+</div>
