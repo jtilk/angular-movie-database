@@ -5,6 +5,10 @@ import { RoutingService } from "./Services/routing.service";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+<<<<<<< HEAD
+import { MovieMasterComponent } from "./movie-master/movie-master.component";
+import { RouterModule, Routes } from "@angular/router";
+=======
 import { MovieCardComponent } from './movie-list/movie-card/movie-card.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { TopnavComponent } from './topnav/topnav.component';
@@ -13,7 +17,12 @@ import { SearchComponent } from './search/search.component';
 import {WatchlistPageComponent} from './watchlist-page/watchlist-page.component';
 import {MovieListComponent} from './movie-list/movie-list.component';
 import {SearchCriteriaComponent} from './search-criteria/search-criteria.component';
+>>>>>>> master
 
+let appRoutes: Routes = [
+  { path: "movieMaster", component: MovieMasterComponent },
+  { path: "watchList", component: MovieMasterComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +35,12 @@ import {SearchCriteriaComponent} from './search-criteria/search-criteria.compone
     HomeComponent,
     SearchComponent
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
+  ],
   providers: [MovieService, RoutingService],
   bootstrap: [AppComponent]
 })
