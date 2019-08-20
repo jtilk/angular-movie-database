@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  //landing page that displays a movie list populated with Popular movies
+
   constructor() { }
 
   ngOnInit() {
