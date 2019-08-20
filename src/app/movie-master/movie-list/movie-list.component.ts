@@ -10,7 +10,7 @@ export class MovieListComponent implements OnInit {
   movieGenre: any;
   constructor(private movieService: MovieService) {}
 
-  getMovieData(searchResult: string): any {
+  getMovieListData(searchResult: string): any {
     console.log("Get Movie Data works (Movie-list component)");
     this.movieService.getMovieData(searchResult).then(response => {
       this.movieData = response.results;
