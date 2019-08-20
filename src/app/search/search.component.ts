@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  //houses search-criteria component and displays search results in the form of movie-list
+
   constructor() { }
 
   ngOnInit() {
