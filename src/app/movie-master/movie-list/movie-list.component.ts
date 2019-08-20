@@ -7,20 +7,24 @@ import { MovieService } from "../../Services/movie.service";
 })
 export class MovieListComponent implements OnInit {
   movieData: any;
+  movieGenre: any;
   constructor(private movieService: MovieService) {}
 
-  getMovieData(): any {
+  getMovieData(searchResult: string): any {
     console.log("Get Movie Data works (Movie-list component)");
-    this.movieService.getMovieData().then(response => {
-      this.movieData = response.data;
+    this.movieService.getMovieData(searchResult).then(response => {
+      this.movieData = response.results;
+      console.log(this.movieData);
     });
-    console.log(this.movieData);
+  }
+  getMovieGenre(): any {
+    console.log("getMovieGenre works (Movie-list component)");
+    this.movieService.getMovieGenre().then(response => {
+      this.movieGenre = response.genres;
+      console.log(this.movieGenre);
+      // console.log(response.genres);
+    });
   }
 
-  ngOnInit() {
-    console.log("Get Movie Data works (Movie-list component)");
-    this.movieService.getMovieData().then(response => {
-      this.movieData = response.data;
-    });
-  }
+  ngOnInit() {}
 }

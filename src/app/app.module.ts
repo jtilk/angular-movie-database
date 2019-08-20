@@ -8,8 +8,13 @@ import { MovieListComponent } from "./movie-master/movie-list/movie-list.compone
 import { WatchlistPageComponent } from "./movie-master/watchlist-page/watchlist-page.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
-import { MovieMasterComponent } from './movie-master/movie-master.component';
+import { MovieMasterComponent } from "./movie-master/movie-master.component";
+import { RouterModule, Routes } from "@angular/router";
 
+let appRoutes: Routes = [
+  { path: "movieMaster", component: MovieMasterComponent },
+  { path: "watchList", component: MovieMasterComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +23,12 @@ import { MovieMasterComponent } from './movie-master/movie-master.component';
     WatchlistPageComponent,
     MovieMasterComponent
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
+  ],
   providers: [MovieService, RoutingService],
   bootstrap: [AppComponent]
 })
