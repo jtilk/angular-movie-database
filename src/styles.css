@@ -1,5 +1,6 @@
 body {
-  background-image: url("src/assets/wireframe/galaxy-background.jpg");
+  background-image: url("src/assets/wireframe/purple-galaxy.jpg");
+  color: white;
 }
 
 li {

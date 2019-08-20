@@ -1,12 +1,9 @@
-
 .movie_card {
   width: 300px;
   height: 450px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .poster_img {
   width: 200px;
 }
-
-
