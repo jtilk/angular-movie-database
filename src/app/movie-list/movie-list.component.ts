@@ -8,14 +8,23 @@ import { MovieService } from "../Services/movie.service";
 export class MovieListComponent implements OnInit {
 
   movieData: object[];
-
+  movieGenre: any;
+  
   constructor(private movieService: MovieService) {}
 
   getMovieData(searchQuery: string): any {
     console.log("Get Movie Data works (Movie-list component)");
     this.movieService.getMovieData("guardians").then(response => {
-      this.movieData = response.results ;
+      this.movieData = response.results;
       console.log(this.movieData);
+    });
+  }
+  getMovieGenre(): any {
+    console.log("getMovieGenre works (Movie-list component)");
+    this.movieService.getMovieGenre().then(response => {
+      this.movieGenre = response.genres;
+      console.log(this.movieGenre);
+      // console.log(response.genres);
     });
   }
 
@@ -29,11 +38,9 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit() {
     console.log("Get Movie Data works (Movie-list component on init)");
-    this.movieService.getMovieData("").then(response => {
-      this.movieData = response.results ;
+    this.movieService.getMovieData("guardians").then(response => {
+      this.movieData = response.results;
       console.log(this.movieData);
     });
-
-
   }
 }
