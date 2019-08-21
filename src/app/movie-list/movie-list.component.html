@@ -1,4 +1,12 @@
 <p>movie-list works</p>
+<form #genreForm="ngForm" (click)="filterMovies(genreForm)">
+  <select name="filter" id="" size="3">
+    <option value="28" name="28" ngModel>Action</option>
+    <option value="horror">Horror</option>
+    <option value="comedy">Comedy</option>
+  </select>
+  <button type="submit">Filter</button>
+</form>
 
 <!-- <app-movie-card
   *ngFor="let movie of movieData"
