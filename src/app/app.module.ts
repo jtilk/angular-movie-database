@@ -16,7 +16,8 @@ import { MovieListComponent } from "./movie-list/movie-list.component";
 import { SearchCriteriaComponent } from "./search-criteria/search-criteria.component";
 import { PopMovieListComponent } from './pop-movie-list/pop-movie-list.component';
 import { PopMovieCardComponent } from './pop-movie-list/pop-movie-card/pop-movie-card.component';
-
+import { WatchlistListComponent } from './watchlist-list/watchlist-list.component';
+import { WatchlistCardComponent } from './watchlist-list/watchlist-card/watchlist-card.component';
 let appRoutes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "movie-list", component: MovieListComponent },
@@ -38,7 +39,9 @@ let appRoutes: Routes = [
     HomeComponent,
     SearchComponent,
     PopMovieListComponent,
-    PopMovieCardComponent
+    PopMovieCardComponent,
+    WatchlistListComponent,
+    WatchlistCardComponent,
   ],
   imports: [
     BrowserModule,
