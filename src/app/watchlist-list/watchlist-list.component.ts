@@ -12,6 +12,10 @@ export class WatchlistListComponent implements OnInit {
 
   constructor(private movieService: MovieService) { }
 
+  onRemoveHandler(index: number): void {
+    this.watchList.splice(index, 1);
+  }
+
   ngOnInit() {
     this.watchList = this.movieService.watchList;
   }

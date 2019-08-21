@@ -1,7 +1,8 @@
 <div class="movie_list_div">
   <app-watchlist-card
-    *ngFor="let movie of watchList"
+    *ngFor="let movie of watchList; index as i"
     [movie]="movie"
+    (onRemove)="onRemoveHandler($event)"
   ></app-watchlist-card>
 </div>
 

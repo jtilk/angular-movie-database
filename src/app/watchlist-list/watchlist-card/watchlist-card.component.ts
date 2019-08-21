@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {MovieService} from '../../Services/movie.service';
 
 @Component({
@@ -8,8 +8,13 @@ import {MovieService} from '../../Services/movie.service';
 })
 export class WatchlistCardComponent implements OnInit {
   @Input() movie: any;
+  @Output() onRemove = new EventEmitter<any>();
   movieDetails: any;
   constructor(private movieService: MovieService) { }
+
+  removeFromWatchlist(index: number) {
+    this.onRemove.emit(index);
+  }
 
   ngOnInit() {
     this.movieService.getMovieDetails(this.movie.id).then(response => {
