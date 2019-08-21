@@ -5,8 +5,22 @@
 }
 
 html,
-body,
-app-root {
+body {
   height: 100%;
   width: 100%;
+}
+app-root {
+  height: 100vh;
+  width: 100vw;
+}
+.headSection {
+  height: 100px;
+  width: 100%;
+  max-width: 100%;
+  border: solid 1px black;
+}
+.viewDisplay {
+  overflow-y: scroll;
+  max-height: 86vh;
+  max-width: 80vw;
 }

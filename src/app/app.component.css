@@ -7,7 +7,6 @@
   grid-template-areas:
     "n m   "
     "n m";
-  grid-gap: 0.5em;
 }
 #mainHead {
   grid-area: h;

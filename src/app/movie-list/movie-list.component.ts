@@ -6,10 +6,9 @@ import { MovieService } from "../Services/movie.service";
   styleUrls: ["./movie-list.component.css"]
 })
 export class MovieListComponent implements OnInit {
-
   movieData: object[];
   movieGenre: any;
-  
+
   constructor(private movieService: MovieService) {}
 
   getMovieData(searchQuery: string): any {
@@ -31,7 +30,7 @@ export class MovieListComponent implements OnInit {
   getPopMovieData(): any {
     console.log("Get Pop Movie Data works (Movie-list component)");
     this.movieService.getPopMovieData().then(response => {
-      this.movieData = response.results ;
+      this.movieData = response.results;
       console.log(this.movieData);
     });
   }
@@ -41,6 +40,10 @@ export class MovieListComponent implements OnInit {
     this.movieService.getMovieData("guardians").then(response => {
       this.movieData = response.results;
       console.log(this.movieData);
+    });
+    this.movieService.getMovieGenre().then(response => {
+      this.movieGenre = response.genres;
+      console.log(this.movieGenre);
     });
   }
 }
