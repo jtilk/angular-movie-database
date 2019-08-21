@@ -4,23 +4,41 @@
   display: grid;
   grid-template-rows: 20% 80%;
   grid-template-columns: 20% 80%;
-  grid-template-areas:
-    "n m   "
-    "n m";
+  grid-template-areas: "n m   " "n m";
   grid-gap: 0.5em;
 }
+
 #mainHead {
   grid-area: h;
   border: solid black 1px;
   background: lightblue;
 }
+
 #sideNav {
   grid-area: n;
   border: solid black 1px;
-  background: lightpink;
+  background: linear-gradient(violet, purple);
 }
+
 #viewContainer {
   grid-area: m;
   border: solid black 1px;
-  background: lightgreen;
+  background: linear-gradient(purple, violet);
+}
+
+.headSection {
+  position: absolute;
+}
+
+.spice {
+  height: 100px;
+  width: 100px;
+}
+
+.spice2 {
+  height: 110px;
+  width: 600px;
+  position: relative;
+  top: 615px;
+  left: 30%;
 }
