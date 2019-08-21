@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 })
 export class MovieService {
   resultsList: object[];
-  watchList: object[];
+  watchList: object[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -40,6 +40,12 @@ export class MovieService {
         "https://api.themoviedb.org/3/genre/movie/list?api_key=e5ae3d31b67ec5459b5a39058c5630cd&language=en-US"
       )
       .toPromise();
+  }
+
+  addToWatchListService(movie: object): any {
+    console.log(movie);
+    this.watchList.push(movie);
+    console.log(this.watchList);
   }
   //   getPopMovieData(searchQuery: string): any {
   //     return this.http

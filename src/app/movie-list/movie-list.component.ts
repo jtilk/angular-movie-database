@@ -26,16 +26,6 @@ export class MovieListComponent implements OnInit {
     });
 }
 
-getPopMovieData(): any {
-  console.log("Get Pop Movie Data works (Movie-list component)");
-  this.movieService.getPopMovieData().then(response => {
-    this.movieData = response.results ;
-  });
-}
-
   ngOnInit() {
-    this.movieService.getPopMovieData().then(response => {
-      this.movieData = response.results ;
-    });
   }
 }

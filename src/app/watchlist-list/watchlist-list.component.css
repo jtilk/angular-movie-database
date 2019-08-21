@@ -1,0 +1,10 @@
+
+.movie_list_div {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+}
+
+app-watchlist-card {
+  margin: 10px;
+}
