@@ -2,6 +2,7 @@
   <app-watchlist-card
     *ngFor="let movie of watchList; index as i"
     [movie]="movie"
+    [movieIndex]="i"
     (onRemove)="onRemoveHandler($event)"
   ></app-watchlist-card>
 </div>

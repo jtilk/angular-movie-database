@@ -6,5 +6,5 @@
   <p class="movie_genre">Genre: </p>
   <p class="user_rating">User Rating: {{ movie.vote_average }}/10 </p>
   <p class="runtime">Runtime: {{ movieDetails?.runtime }} Minutes</p>
-  <button (click)="removeFromWatchlist(index)">Remove from Watchlist</button>
+  <button (click)="removeFromWatchlist(movieIndex)">Remove from Watchlist</button>
 </div>

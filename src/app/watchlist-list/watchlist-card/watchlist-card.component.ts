@@ -9,6 +9,7 @@ import {MovieService} from '../../Services/movie.service';
 export class WatchlistCardComponent implements OnInit {
   @Input() movie: any;
   @Output() onRemove = new EventEmitter<any>();
+  @Input() movieIndex: number;
   movieDetails: any;
   constructor(private movieService: MovieService) { }
 
