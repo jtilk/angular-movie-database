@@ -1,21 +1,22 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { MovieService } from "../Services/movie.service";
+
 @Component({
   selector: "app-movie-list",
   templateUrl: "./movie-list.component.html",
   styleUrls: ["./movie-list.component.css"]
 })
-export class MovieListComponent implements OnInit {
 
+export class MovieListComponent implements OnInit {
+  @Output() event = new EventEmitter<void>();
   movieData: object[];
   movieGenre: any;
 
   constructor(private movieService: MovieService) {}
 
   getMovieData(searchQuery: string): any {
-    this.movieService.getMovieData("guardians").then(response => {
+    this.movieService.getMovieData(searchQuery).then(response => {
       this.movieData = response.results;
-      console.log(this.movieData);
     });
   }
   getMovieGenre(): any {
@@ -23,20 +24,18 @@ export class MovieListComponent implements OnInit {
       this.movieGenre = response.genres;
       console.log(this.movieGenre);
     });
-  }
+}
 
-  getPopMovieData(): any {
-    console.log("Get Pop Movie Data works (Movie-list component)");
-    this.movieService.getPopMovieData().then(response => {
-      this.movieData = response.results ;
-      console.log(this.movieData);
-    });
-  }
+getPopMovieData(): any {
+  console.log("Get Pop Movie Data works (Movie-list component)");
+  this.movieService.getPopMovieData().then(response => {
+    this.movieData = response.results ;
+  });
+}
 
   ngOnInit() {
     this.movieService.getPopMovieData().then(response => {
       this.movieData = response.results ;
-      console.log(this.movieData);
     });
   }
 }
