@@ -16,7 +16,7 @@ import { MovieListComponent } from "./movie-list/movie-list.component";
 import { SearchCriteriaComponent } from "./search-criteria/search-criteria.component";
 
 let appRoutes: Routes = [
-  { path: "home", component: AppComponent },
+  { path: "home", component: HomeComponent },
   { path: "movie-list", component: MovieListComponent },
   { path: "movie-card", component: MovieCardComponent },
   { path: "search", component: SearchComponent },
