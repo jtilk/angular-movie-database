@@ -1,3 +1,18 @@
+/* <<<<<<< HEAD */
+
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body, app-root {
+  height: 100%;
+  width: 100%;
+}
+
+/* =======
 body {
   background-image: url("src/assets/wireframe/purple-galaxy.jpg");
   color: white;
@@ -5,4 +20,9 @@ body {
 
 li {
   list-style-type: none;
+<<<<<<< HEAD
 }
+
+>>>>>>> 1a0af56d09fc4d62c97ebbd9014bcef595fd49aa
+}
+>>>>>>> master */
