@@ -14,6 +14,8 @@ import { SearchComponent } from "./search/search.component";
 import { WatchlistPageComponent } from "./watchlist-page/watchlist-page.component";
 import { MovieListComponent } from "./movie-list/movie-list.component";
 import { SearchCriteriaComponent } from "./search-criteria/search-criteria.component";
+import { PopMovieListComponent } from './pop-movie-list/pop-movie-list.component';
+import { PopMovieCardComponent } from './pop-movie-list/pop-movie-card/pop-movie-card.component';
 
 let appRoutes: Routes = [
   { path: "home", component: HomeComponent },
@@ -34,7 +36,9 @@ let appRoutes: Routes = [
     SidenavComponent,
     TopnavComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    PopMovieListComponent,
+    PopMovieCardComponent
   ],
   imports: [
     BrowserModule,

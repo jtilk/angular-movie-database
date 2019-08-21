@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../Services/movie.service';
+import {MovieService} from '../Services/movie.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-pop-movie-list',
+  templateUrl: './pop-movie-list.component.html',
+  styleUrls: ['./pop-movie-list.component.css']
 })
-export class HomeComponent implements OnInit {
-
-  //landing page that displays a movie list populated with Popular movies
+export class PopMovieListComponent implements OnInit {
 
   movieData: object[];
 
@@ -22,6 +20,8 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.movieService.getPopMovieData().then(response => {
+      this.movieData = response.results ;
+    });
   }
-
 }
