@@ -12,7 +12,7 @@ export class PopMovieCardComponent implements OnInit {
   watchList: object[];
   constructor(private movieService: MovieService) { }
 
-  addToWatchlist(movie: object): void{
+  addToWatchlist(movie: object): void {
     this.movieService.addToWatchListService(movie);
   }
 

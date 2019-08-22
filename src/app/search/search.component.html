@@ -1,1 +1,14 @@
-<p>search works!</p>
+<form #form="ngForm" (ngSubmit)="getMovieData(form)">
+  <input
+    type="text"
+    name="searchTerm"
+    ngModel
+    placeholder="What movie title are you looking for?"
+  />
+  <button type="submit"><i class="fas fa-search"></i></button>
+</form>
+
+<div class="viewDisplay">
+  <p class="view_header">Search Results: </p>
+  <app-movie-list [movieData]="movieData"></app-movie-list>
+</div>

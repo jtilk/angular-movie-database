@@ -8,14 +8,14 @@ import { MovieService } from '../Services/movie.service';
 })
 export class HomeComponent implements OnInit {
 
-  //landing page that displays a movie list populated with Popular movies
+  // landing page that displays a movie list populated with Popular movies
 
   movieData: object[];
 
   constructor(private movieService: MovieService) { }
 
   getPopMovieData(): any {
-    console.log("Get Pop Movie Data works (Movie-list component)");
+    console.log('Get Pop Movie Data works (Movie-list component)');
     this.movieService.getPopMovieData().then(response => {
       this.movieData = response.results ;
     });

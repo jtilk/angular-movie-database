@@ -1,12 +1,10 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class MovieService {
-  resultsList: object[];
   watchList: object[] = [];
 
   constructor(private http: HttpClient) {}
@@ -37,15 +35,13 @@ export class MovieService {
   getMovieGenre(): any {
     return this.http
       .get(
-        "https://api.themoviedb.org/3/genre/movie/list?api_key=e5ae3d31b67ec5459b5a39058c5630cd&language=en-US"
+        'https://api.themoviedb.org/3/genre/movie/list?api_key=e5ae3d31b67ec5459b5a39058c5630cd&language=en-US'
       )
       .toPromise();
   }
 
   addToWatchListService(movie: object): any {
-    console.log(movie);
     this.watchList.push(movie);
-    console.log(this.watchList);
   }
   //   getPopMovieData(searchQuery: string): any {
   //     return this.http

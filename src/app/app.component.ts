@@ -1,13 +1,13 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 // import { Router } from "@angular/router";
-import { RoutingService } from "./Services/routing.service";
+import { RoutingService } from './Services/routing.service';
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "angular-project";
+  title = 'angular-project';
   constructor(private routingService: RoutingService) {}
 
   navToHome(): void {

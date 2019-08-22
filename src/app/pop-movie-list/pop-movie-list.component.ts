@@ -13,7 +13,7 @@ export class PopMovieListComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   getPopMovieData(): any {
-    console.log("Get Pop Movie Data works (Movie-list component)");
+    console.log('Get Pop Movie Data works (Movie-list component)');
     this.movieService.getPopMovieData().then(response => {
       this.movieData = response.results ;
     });

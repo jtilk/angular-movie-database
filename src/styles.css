@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+body {
+  background: linear-gradient(rebeccapurple, violet, white);
+}
+
 html,
 body {
   height: 100%;
@@ -20,7 +24,6 @@ app-root {
   height: 100px;
   width: 100%;
   max-width: 100%;
-  border: solid 1px black;
 
 }
 
@@ -28,4 +31,11 @@ app-root {
   overflow-y: scroll;
   max-height: 86vh;
   max-width: 80vw;
+}
+
+.view_header {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
 }
