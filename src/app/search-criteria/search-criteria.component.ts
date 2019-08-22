@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  //For search form. On submit, sends data to service
+  // For search form. On submit, sends data to service
 
   constructor() { }
 

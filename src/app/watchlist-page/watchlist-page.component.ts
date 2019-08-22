@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WatchlistPageComponent implements OnInit {
 
-  //displays a movie-list component for watchlist array stored in movie service
+  // displays a movie-list component for watchlist array stored in movie service
 
   constructor() { }
 

@@ -1,24 +1,24 @@
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class RoutingService {
   constructor(private router: Router) {}
 
   navToHome(): void {
-    this.router.navigate(["home"]);
+    this.router.navigate(['home']);
   }
   navToWatchList(): void {
-    this.router.navigate(["watch-list"]);
+    this.router.navigate(['watch-list']);
   }
   navToSearch(): void {
-    this.router.navigate(["search"]);
+    this.router.navigate(['search']);
   }
   navToMovieList(): void {
-    this.router.navigate(["movie-list"]);
+    this.router.navigate(['movie-list']);
   }
   navToMovieCard(): void {
-    this.router.navigate(["movie-card"]);
+    this.router.navigate(['movie-card']);
   }
 }

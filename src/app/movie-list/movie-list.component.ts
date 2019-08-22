@@ -1,15 +1,15 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
-import { MovieService } from "../Services/movie.service";
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import { MovieService } from '../Services/movie.service';
 
 @Component({
-  selector: "app-movie-list",
-  templateUrl: "./movie-list.component.html",
-  styleUrls: ["./movie-list.component.css"]
+  selector: 'app-movie-list',
+  templateUrl: './movie-list.component.html',
+  styleUrls: ['./movie-list.component.css']
 })
 
 export class MovieListComponent implements OnInit {
   @Output() event = new EventEmitter<void>();
-  movieData: object[];
+  @Input() movieData: object[];
   movieGenre: any;
 
   constructor(private movieService: MovieService) {}
