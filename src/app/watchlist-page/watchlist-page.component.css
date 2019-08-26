@@ -1,0 +1,21 @@
+
+.headSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333333;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.headSection img{
+  width: 500px;
+  margin: 5px;
+}
+
+#wish_emphasis {
+  color: gold;
+  font-weight: bold;
+  font-style: italic;
+}
+

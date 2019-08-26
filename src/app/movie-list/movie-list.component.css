@@ -1,0 +1,11 @@
+
+.movie_list_div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+app-movie-card {
+  margin: 10px;
+}
