@@ -37,5 +37,11 @@ app-root {
   font-size: 30px;
   text-align: center;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: underline white;
+  color: gold;
+  text-shadow: 10px 10px 30px black;
+  margin: 15px;
 }
+
+
+

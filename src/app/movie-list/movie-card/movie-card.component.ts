@@ -11,6 +11,10 @@ export class MovieCardComponent implements OnInit {
   movieDetails: any;
   constructor(private movieService: MovieService) { }
 
+  addToWatchlist(movie: object): void {
+    this.movieService.addToWatchListService(movie);
+  }
+
   ngOnInit() {
     this.movieService.getMovieDetails(this.movie.id).then(response => {
       this.movieDetails = response ;

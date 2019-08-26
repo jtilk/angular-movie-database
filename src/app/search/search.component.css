@@ -1,4 +1,24 @@
 
+.headSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333333;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.headSection img{
+  width: 500px;
+  margin: 5px;
+}
+
+#wish_emphasis {
+  color: gold;
+  font-weight: bold;
+  font-style: italic;
+}
+
 form {
   display: flex;
   flex-direction: row;
@@ -14,7 +34,7 @@ input {
   padding-left: 20px;
   margin-right: 50px;
   border: none;
-  border-bottom: 2px gray groove;
+  /*border-bottom: 2px gray groove;*/
 }
 
 button[type="submit"] {
@@ -24,7 +44,7 @@ button[type="submit"] {
   background: grey;
   color: #ffffff;
   border: none;
-  border-left: #ffffff dashed;
+  /*border-left: #ffffff dashed;*/
 }
 
 button i {
@@ -32,6 +52,15 @@ button i {
   font-size: 40px;
 }
 
+button i:hover {
+  cursor: pointer;
+}
+
 input::placeholder {
   color: #ffffff;
+  font-style: italic;
+}
+
+input:active {
+
 }
